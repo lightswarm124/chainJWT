@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
 
-const wrap = require('./wrap');
+const wrap = require('../wrap');
 
 module.exports = async () => {
   let blockHeight = await axios.get('https://rest.bitcoin.com/v1/blockchain/getBlockCount')

@@ -1,10 +1,20 @@
 {
   "name": "chainJWT",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "build-node": "babel ./src --out-dir ./dist --source-maps --copy-files",
+    "build": "yarn build-node"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "jsonwebtoken": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-transform-arrow-functions": "^7.0.0",
+    "@babel/preset-env": "^7.1.0"
   }
 }
